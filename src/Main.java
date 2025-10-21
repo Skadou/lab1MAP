@@ -1,13 +1,14 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.util.Arrays;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public class Main {
+    public static void main(String[] args) {
+        int[] noten = {29, 37, 38, 41, 84, 67};
+        System.out.println(Arrays.toString(noten));
+
+        int[] ausreichendNoten = NotenBehandlung.getAusreichendNoten(noten);
+        System.out.println("Ausreichende Noten:" + Arrays.toString(ausreichendNoten));
+
+        double durchschnitt = NotenBehandlung.berechneNotendurchschnitt(noten);
+        System.out.println("Notendurchschnitt: " + durchschnitt);
     }
 }
