@@ -11,7 +11,8 @@ public class Main {
 
         //2
         double durchschnitt = NotenBehandlung.berechneNotendurchschnitt(noten);
-        System.out.println("Notendurchschnitt: " + durchschnitt);
+        System.out.print("Notendurchschnitt: ");
+        System.out.printf("%.2f \n", durchschnitt);
 
         //3
         int[] runden = NotenBehandlung.getrundeNoten(noten);
